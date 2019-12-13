@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KYC/AML FinCen Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 id="title">Know Your Customer: FinCen</h1>
+<div id="form-outer">
+  <blockquote> <em>"Know Yourself"</em> - Drake </blockquote>
+  
+  <p id="description">
+   
+To help the government fight financial crime, Federal regulation requires certain financial
+institutions to obtain, verify, and record information about the beneficial owners of legal
+entity customers. Legal entities can be abused to disguise involvement in terrorist
+financing, money laundering, tax evasion, corruption, fraud, and other financial crimes.
+Requiring the disclosure of key individuals who own or control a legal entity (i.e., the
+beneficial owners) helps law enforcement investigate and prosecute these crimes. 
+  </p>
+  <h2>Who has to complete this form? </h2>
+  <p class="info">
+    This form must be completed by the person opening a new account on behalf of a legal
+entity with any ofthe following U.S. financial institutions: (i) a bank or credit union; (ii)
+a broker or dealer in securities; (iii) a mutual fund; (iv) a futures commission merchant;
+or (v) an introducing broker in commodities.
+For the purposes ofthis form, a legal entity includes a corporation, limited liability
+company, or other entity that is created by a filing of a public document with a Secretary
+of State or similar office, a general partnership, and any similar business entity formed in
+the United States or a foreign country. Legal entity does not include sole
+proprietorships, unincorporated associations, or natural persons opening accounts on their
+own behalf. 
+  </p>
+  <h2>CERTIFICATION OF BENEFICIAL OWNER</h2>
+  <h3>Persons opening an account on behalf of a legal entity must provide the following
+information: </h3>
+  <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">Name of Natural Person Opening Account:</label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Name of Natural Person Opening Account:" required>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">Title of Natural Person Opening Account:</label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Title of Natural Person Opening Account:" required>
+      </div>
+    </div>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label id="entity-label" for="entity">Name of Legal Entity for Which the Account is Being Opened:</label>
+      </div>
+      <div class="rightTab">
+        <input type="entity" name="entity" id="entity" class="input-field" required placeholder="Enter the Name of Legal Entity ">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="entity-label" for="entity">Address of Legal Entity for Which the Account is Being Opened:</label>
+      </div>
+      <div class="rightTab">
+        <input type="address" name="address" id="address" class="input-field" required placeholder="Enter the Address of the Entity">
+      </div>
+    </div>
+    
+    <h3>The following information for each individual, if any, who, directly or indirectly,
+through any contract, arrangement, understanding, relationship or otherwise, owns
+25 percent or more of the equity interests of the legal entity listed above:</h3>
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label id="number-label" for="age">Enter Your Age</label>
+      </div>
+      <div class="rightTab">
+        <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+      </div>
+    </div>
+<!--   name, dob, address, ssn, cell, dlicense#, front pic, back pic   -->
+    <h3>The following information for one individual with significant responsibility for
+managing the legal entity listed above, such as:</h3>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">Select Your Position</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+      <option disabled value>Select a Role</option>
+          
+      <option value="student">Executive Officer</option>
+      <option value="job">Senior Manager</option>
+      <option value="learner">General Partner</option>
+      <option value="preferNo">President</option>
+      <option value="other">Any other individual who regularly performs similar functions</option>
+    </select>
+      </div>
+      
+      <!--   name, dob, address, ssn, cell, dlicense#, front pic, back pic   -->
+<div>
+  <p>I, 
+    <div class="rightTab2">
+        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Name of Natural Person Opening Account:" required>
+      </div>
+    (name of natural person opening account), hereby certify, to the
+best of my knowledge, that the information provided above is complete and correct. </p>
+</div>
+    </div>
+
+    
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">Any Comments or Suggestions?</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+    </div> 
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
+</body>
+<!-- 
+    // // FinCEN believes that there are four
+// core elements of customer due diligence
+// (CDD), and that they should be explicit
+// requirements in the anti-money
+// laundering (AML) program for all
+// covered financial institutions, in order
+// to ensure clarity and consistency across
+// sectors: (1) Customer identification and
+// verification, (2) beneficial ownership
+// identification and verification, (3)
+// understanding the nature and purpose
+// of customer relationships to develop a
+// customer risk profile, and (4) ongoing
+// monitoring for reporting suspicious
+// transactions and, on a risk-basis,
+// maintaining and updating customer
+// information. The first is already an AML
+// program requirement and the second
+// will be required by this final rule. The
+// third and fourth elements are already
+// implicitly required for covered financial
+// institutions to comply with their
+// suspicious activity reporting
+// requirements. The AML program rules
+// for all covered financial institutions are
+// being amended by the final rule in order
+// to include the third and fourth elements
+// as explicit requirements.
+// FinCEN has the legal authority for this
+// action in the Bank Secrecy Act (BSA),
+// which authorizes FinCEN to impose
+// AML program requirements on all
+// financial institutions 1 and to require
+// financial institutions to maintain
+// procedures to ensure compliance with
+// the BSA and its implementing
+// regulations or to guard against money
+// laundering.2
+// B. Summary of the Major Provisions of
+// the Rulemaking
+// 1. Beneficial Ownership
+// Beginning on the Applicability Date,
+// covered financial institutions 3 must
+// identify and verify the identity of the
+// beneficial owners of all legal entity
+// customers (other than those that are
+// excluded) at the time a new account is
+// opened (other than accounts that are
+// exempted). The financial institution
+// may comply either by obtaining the
+// required information on a standard
+// certification form (Certification Form
+// (Appendix A)) or by any other means
+// that com
+
+/*
+developing a customer risk profile.
+A customer risk profile refers to the
+information gathered about a customer
+at account opening used to develop a
+baseline against which customer activity
+is assessed for suspicious activity
+reporting. This may include self-evident
+information such as the type of
+customer or type of account, service, or
+product. The profile may, but need not,
+include a system of risk ratings or
+categories of customers.
+In addition, customer due diligence
+also includes conducting ongoing
+monitoring to identify and report
+suspicious transactions and, on a risk
+basis, to maintain and update customer
+information. For these purposes,
+customer information shall include
+information regarding the beneficial
+owners of legal entity customers (as
+defined in § 1010.230). The first clause
+of paragraph (ii) sets forth the
+requirement that financial institutions
+conduct monitoring to identify and
+report suspicious transactions.
+
+ The
+RIA uses Treasury’s estimate of $300
+billion in illicit proceeds generated
+annually in the United States due to
+financial crimes, to determine the
+minimum level of effectiveness that the
+final rule would need to achieve for the
+benefits to equal the costs. Based on this
+analysis, using the upper bound of our
+cost assessment, FinCEN has concluded
+that the final rule would only have to
+reduce illicit activity by 0.6 percent to
+yield a positive net benefit. The
+Treasury Department believes that the
+final rule will reduce illicit activity by
+a greater amount than this. 
+
+ ‘‘Bank
+Secrecy Act’’ (BSA).6 The BSA
+authorizes the Secretary of the Treasury
+(Secretary) to require financial
+institutions to keep records and file
+reports that ‘‘have a high degree of
+usefulness in criminal, tax, or regulatory
+investigations or proceedings, or in the
+conduct of intelligence or
+counterintelligence activities, including
+analysis, to protect against international
+terrorism.’’ 7
+
+dether-whitepaper.pdf
+
+investigations in support of tax
+compliance, and advancing
+commitments made to foreign
+counterparts in connection with the
+provisions commonly known as the
+Foreign Account Tax Compliance Act
+(FATCA); 11
+(5) Promoting consistency in
+implementing and enforcing CDD
+regulatory expectations across and
+within financial sectors; and
+(6) Advancing Treasury’s broad
+strategy to enhance financial
+transparency of legal entities. 
+
+
+investigations in support of tax
+compliance, and advancing
+commitments made to foreign
+counterparts in connection with the
+provisions commonly known as the
+Foreign Account Tax Compliance Act
+(FATCA); 11
+(5) Promoting consistency in
+implementing and enforcing CDD
+regulatory expectations across and
+within financial sectors; and
+(6) Advancing Treasury’s broad
+strategy to enhance financial
+transparency of legal entities. 
+
+A bank holding company, as defined in
+section 2 of the Bank Holding
+Company Act of 1956 (12 U.S.C.
+1841), or savings and loan holding
+company, as defined in section 10(n)
+of the Home Owners’ Loan Act (12
+U.S.C. 1467a(n))—§ 1010.230(e)(2)(x)
+At the suggestion of several
+commenters, bank holding companies,
+which include financial holding
+companies, have been excluded from
+the beneficial ownership requirement in
+the final rule because the Federal
+Reserve Board maintains beneficial
+ownership information on all of these
+companies. Savings and loan holding
+companies are excluded for the same
+reason. 
+
+Private Label Retail Credit Accounts
+Established at the Point-of-Sale
+One commenter requested that
+FinCEN exempt point-of-sale retail
+credit accounts provided to small to
+mid-size business customers, including
+commercial private label and cobranded credit cards and installment
+loans, from the scope of coverage of the
+beneficial ownership requirement. This
+commenter noted that such accounts
+presented a lower risk of money
+laundering due in large part to
+limitations on the use of those cards
+inherent in these customer
+relationships. For example, because
+private label credit cards can be used
+only to purchase goods or services at the
+specified retailer at which they are
+issued, they would not be an attractive
+vehicle to launder illicit proceeds. That
+these accounts can only be used for
+domestic transactions, and generally
+have lower credit limits, are additional
+factors that mitigate the risk of these
+accounts. FinCEN has learned that legal
+entities without an established and
+verifiable credit history that seek such
+accounts are generally required to
+provide a personal guarantee by a
+natural person whose identity and
+credit history are verified. We agree that
+these characteristics and limitations
+associated with private label credit card
+accounts that are used exclusively
+within issuing retailers’ networks,
+significantly decrease these accounts’
+susceptibility to abuse by money
+launderers and terrorist financers. Thus,
+covered financial institutions are
+exempt from the beneficial ownership
+requirement with respect to private
+label credit card accounts to the limited
+extent that they are established at the
+point-of-sale to obtain credit products,
+including commercial private label
+credit cards, solely for the purchase of
+retail goods and/or services at the
+issuing retailer and have a credit limit
+of no more than $50,000.
+In contrast, credit ca
+
+Private Label Retail Credit Accounts
+Established at the Point-of-Sale
+One commenter requested that
+FinCEN exempt point-of-sale retail
+credit accounts provided to small to
+mid-size business customers, including
+commercial private label and cobranded credit cards and installment
+loans, from the scope of coverage of the
+beneficial ownership requirement. This
+commenter noted that such accounts
+presented a lower risk of money
+laundering due in large part to
+limitations on the use of those cards
+inherent in these customer
+relationships. For example, because
+private label credit cards can be used
+only to purchase goods or services at the
+specified retailer at which they are
+issued, they would not be an attractive
+vehicle to launder illicit proceeds. That
+these accounts can only be used for
+domestic transactions, and generally
+have lower credit limits, are additional
+factors that mitigate the risk of these
+accounts. FinCEN has learned that legal
+entities without an established and
+verifiable credit history that seek such
+accounts are generally required to
+provide a personal guarantee by a
+natural person whose identity and
+credit history are verified. We agree that
+these characteristics and limitations
+associated with private label credit card
+accounts that are used exclusively
+within issuing retailers’ networks,
+significantly decrease these accounts’
+susceptibility to abuse by money
+launderers and terrorist financers. Thus,
+covered financial institutions are
+exempt from the beneficial ownership
+requirement with respect to private
+label credit card accounts to the limited
+extent that they are established at the
+point-of-sale to obtain credit products,
+including commercial private label
+credit cards, solely for the purchase of
+retail goods and/or services at the
+issuing retailer and have a credit limit
+of no more than $50,000.
+In contrast, credit ca
+
+114Treasury understands that most financial
+institutions do not build their own systems for
+entering and storing data regarding their customers,
+but rather purchase such systems from third parties
+that specialize in provid
+
+We estimate that first-year costs
+would range from roughly $370 million
+to $520 million; training costs would be
+lower in subsequent years. Furthermore,
+we estimate that the 10-year costs range
+from roughly $1.15 billion to $2.15
+billion in present value and that
+annualized costs would range from
+approximately $150 million to $290
+million. 
+
+Table 2 summarizes the estimated
+costs. Estimated first year training costs
+range from roughly $210 million to $260
+million depending on the share of
+employees trained and the duration of
+the training sessions. First-year costs are
+so much greater than the costs in
+subsequent years for two reasons: All
+employees who receive training are
+given the longer initial training in the
+first year, but take shorter refresher
+training in the following years, and
+compliance staff must design the
+training in the first year.121
+
+4 We use an estimate of 8
+million new accounts per year, which
+takes into account all financial accounts
+that will be excluded or exempted from
+the rule. We consider a range of 20 to
+40 minutes of additional time on
+average to open an account under the
+CDD rule, based on a series of telephone
+calls with covered institutions, and on
+public comments received in response
+to both the NPRM and the preliminary
+version of the RIA published in
+December 2015.125
+
+We base a financial
+institution’s cost of the additional time
+spent onboarding a single account on
+$16.77, the average wage for ‘‘new
+account clerks’’ in the financial industry
+according to data furnished by the BLS.
+For a seven-percent discount rate, the
+present value of onboarding costs has an
+approximate range of $350 million to
+$705 million; for a three-percent
+discount rate, the present value of
+onboarding costs is roughly $410
+million to $825 million. 
+
+121Using information provided in a comment by
+a major trade association, we adopted 200 hours as
+the necessary amount of time to design training per
+financial institution.
+
+ Furthermore, we use wage
+data from the May 2014 BLS Occupational
+Employment Statistics for ‘‘compliance officers’’
+working in business establishments in sectors
+having one of the four-digit North American
+Industry Classification System (NAICS) codes
+mentioned in footnote 116; the average hourly wage
+for these compliance officers is $34.03. The total
+cost of designing trainings is the product of this
+wage, 200 (hours), and the number of financial
+institutions
+
+123One of the financial institutions we
+interviewed was a large bank whose representatives
+stated that all of its employees would require
+training for one-half hour. In the above analysis, if
+all employees at all covered institutions required
+one hour of initial training and subsequent annual
+refresher training of 15 minutes, then the present
+value of 10-year training costs would be $561
+million. Although we think it is unlikely that labor
+force training would need to be this widespread,
+this estimate provides an upper bound for total
+training costs. 
+
+In the preliminary RIA, we used 15 and 30
+minutes for the low and high scenario average
+increases, respectively, in onboarding time per
+account, but some commenters objected to these
+values as being too low
+
+Also, for the sake of consistency
+with the computations for additional
+onboarding costs for financial
+institutions, we necessarily assume that
+8 million new legal entity accounts are
+opened each year in calculating client
+costs. We use $22.71 per hour, the
+weighted average hourly wage for all
+employees from the May 2014 National
+Occupational Employment and Wage
+Estimates report. Using a seven-percent
+discount rate, the present value of the
+total additional cost to covered
+institution clients opening a new
+account range from $475 million to $955
+million; the analogous figures for a
+three-percent discount rate are $560
+million and $1.2 billion. 
+
+We expect that with adoption of the
+final rule, SARs filed by covered
+financial institutions will be
+increasingly likely to include beneficial
+ownership information for legal entity
+accounts as, over time, the share of
+accounts on which beneficial ownership
+information would be gathered at
+opening rises. This information would
+speed the identification of complicit
+individuals by law enforcement
+agencies. 
+
+The National Money Laundering Risk
+Assessment 2015 estimated the annual
+volume of money laundering in the
+United States at $300 billion. The same
+source notes that one of the key
+vulnerabilities exploited by moneylaunderers is ‘‘creating legal entities
+without accurate information about the
+identity of the beneficial owner.’’ 1
+
+9One small bank we surveyed reported that it
+opened 471 accounts for organizations in 2014. This
+number includes an unknown number of sole
+proprietorships that would not be subject to the
+rule, as well as 179 accounts for loan customers, for
+which the bank would typically identify the
+beneficial owner(s) in order to obtain personal
+guarantees. A second small bank we surveyed
+reported that it opened 333 accounts in 2014 for
+legal entities, which includes an unknown number
+of sole proprietorships, as well as 106 loan
+customers. A small credit union we surveyed opens
+24 to 36 accounts for businesses per year, which
+includes an unknown number of sole
+proprietorships. FinCEN believes its estimated
+range of costs may be high because the calculation
+is based on the small bank that opened the greater
+number of legal entity accounts, assumes that none
+of the accounts reported were opened for sole
+proprietorships, and includes loan customers, for
+which the bank would generally already identify
+beneficial owners. The estimated cost is based on
+the bank-reported 471 new accounts per year,
+additional time at account opening of 15 to 30
+minutes, and the average wage of $16.77 for the
+financial industry ‘‘new account clerks’’ reported by
+the Bureau of Labor Statistics. FinCEN believes that
+utilizing this number of new accounts is more
+appropriate than the 1.5 new accounts per day
+stated in the NPRM, since it is based on actual data
+from a small bank. 
+
+FinCEN also notes that the estimate is
+almost certainly much greater than
+would be the actual case for most small
+credit unions. This is because FinCEN
+understands that approximately 3,000
+small credit unions have five or fewer
+employees.181 Training for an
+institution with five employees, based
+on the assumptions above, would cost
+much less than the $1,250 lower
+estimate above. 
+
+Although no small entities estimated the
+cost for this, an industry trade
+association stated that small banks
+would incur expenses of nearly $13,000
+to develop and administer the training. 
+
+FinCEN notes that one credit union with
+assets of $2.3 billion estimated the cost
+of IT enhancements to be $23,270, and
+another with assets of $2.8 billion
+estimated such costs at $11,500. Given
+that these institutions are several times
+larger than the largest small credit
+unions, it would seem that the IT
+upgrade costs for small entities could be
+expected to generally be less than
+$10,000.182
+
+Specifically, FinCEN increased its
+estimate of the time to develop and
+maintain beneficial ownership
+identification procedures, from one
+hour to 56 hours (40 for small entities),
+and its estimate of the time for
+identification, verification, and review
+and recordkeeping of the beneficial
+owners of legal entity customers, from
+20 minutes per customer to a range of
+20–40 minutes per customer. 
+
+Estimated Recordkeeping Burden:
+7,041,289 hours.192
+*/
+ -->
+
+</html>
